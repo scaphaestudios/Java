@@ -1,0 +1,21 @@
+@echo off
+cls
+echo.-------------
+echo c - Compile
+echo r - Run
+echo.-------------
+set /p option=option :
+if %option%== c goto compile
+if %option%== C goto compile
+if %option%== r goto run
+if %option%== R goto run
+:Compile
+cls
+javac Hello.java
+pause
+goto start
+:Run
+cls
+java Hello
+pause
+exit
